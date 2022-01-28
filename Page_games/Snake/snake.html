@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> SNAKE </title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="snake.css">
+    </head>
+
+    <body>
+
+        <div class="theGame">
+            
+            <h1 class="left">
+                <audio controls loop>
+                    <source src='Forêt.mp3'>
+                </audio>
+            </h1>
+
+            <h1 class="center"> Let's play Snake ! </h1>
+            <h1 class="right">Tips :</h1>
+            <br><br>
+
+            <label class="left" style="font-size: 20px;">
+                <strong>Here are the controls :</strong>
+                <p id="control_text" style="font-size: 15px;">
+                    - Up : z<br>
+                    - Down : s<br>
+                    - Left : q<br>
+                    - Right : d
+                </p>
+
+                <br>
+                <strong>But you can change them :<br>
+                    <aa style="font-size: 12px;">Do not put any number</aa>
+                </strong>
+                <br><br>
+
+                <input type="text" id="change_Up" value="a" required minlength="1" maxlength="1" size="10">
+                <button type="button" onclick="getValue();">Register ALL controls</button>
+                <up>(up)</up>
+                <br>
+
+                <input type="text" id="change_Down" value="s" required minlength="1" maxlength="1" size="10">
+                <button type="button" onclick="getValue();">Register ALL controls</button>
+                <down>(down)</down>
+                <br>
+
+                <input type="text" id="change_Left" value="q" required minlength="1" maxlength="1" size="10">
+                <button type="button" onclick="getValue();">Register ALL controls</button>
+                <left>(left)</left>
+                <br>
+
+                <input type="text" id="change_Right" value="d" required minlength="1" maxlength="1" size="10">
+                <button type="button" onclick="getValue();">Register ALL controls</button>
+                <right>(right)</right>
+                <br><br>
+
+                <button type="button" onclick="directionWithArrows();">Control the snake with your keyboard's arrows</button>
+                <br><br>
+
+
+            </label>
+
+            <label class="right" style="font-size: 15px; margin-right: 0%;">
+                <strong>- Play the music at top left<br></strong>
+                - Eat red apple<br>
+                - Try to eat black apple :)<br>
+                - The yellow apple is doing magic ! :)<br>
+                - Careful, yellow apple can hide black apple,
+                it's about luck :)<br>
+                - Have fun !
+            </label>
+
+        </div>
+
+        <div id="contain">
+
+            <canvas id="canvas" width="500" height="500"
+                    style="background: url(gazon.webp) no-repeat center center;
+                    border:2px solid #000000;">
+            </canvas>
+
+        </div>
+
+        <script src="snake.js"></script>
+
+    </body>
+</html>
